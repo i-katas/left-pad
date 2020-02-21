@@ -11,4 +11,10 @@ public class LeftPadTest {
     assertThat(LeftPad.pad("", '_', 1), equalTo("_"));
     assertThat(LeftPad.pad("", '_', 3), equalTo("___"));
   }
+
+  @Test
+  public void contentLengthGreaterThanOrEqualToPaddingSize() throws Throwable {
+    assertThat(LeftPad.pad("abc", '_', 0), equalTo("abc"));
+    assertThat(LeftPad.pad("abc", '_', 3), equalTo("abc"));
+  }
 }
