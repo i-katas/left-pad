@@ -1,13 +1,11 @@
 package com.katas;
 
+import java.util.Arrays;
+
 public class LeftPad {
   public static String pad(String s, char pad, int n) {
     char[] padding = new char[n];
-    int i = 0;
-    while(i < n) {
-      padding[i] = pad;
-      i++;
-    }
+    Arrays.fill(padding, pad);
     return String.valueOf(padding);
   }
 }
