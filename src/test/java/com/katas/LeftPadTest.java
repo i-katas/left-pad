@@ -8,6 +8,7 @@ public class LeftPadTest {
   @Test
   public void empty() throws Throwable {
     assertThat(LeftPad.pad("", '_', 0), equalTo(""));
+    assertThat(LeftPad.pad("", '_', 1), equalTo("_"));
     //assertThat(LeftPad.pad("", '_', 3), equalTo("___"));
   }
 }
